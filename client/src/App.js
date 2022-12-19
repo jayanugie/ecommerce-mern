@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Header />
       <main>
         <Container>
-          <h1>Welcome to GieShop</h1>
+          <HomePage />
         </Container>
       </main>
       <Footer />
