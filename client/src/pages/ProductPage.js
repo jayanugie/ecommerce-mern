@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 // import Rating
 import products from "../products";
+import { numberFormat } from "../helpers";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -29,7 +30,7 @@ const ProductPage = () => {
                 {product.rating} from {product.numReviews}
               </p>
             </ListGroup.Item>
-            <ListGroup.Item>Price: {product.price}</ListGroup.Item>
+            <ListGroup.Item>Price: {numberFormat(product.price)}</ListGroup.Item>
             <ListGroup.Item>Description: {product.description}</ListGroup.Item>
           </ListGroup>
         </Col>
@@ -40,7 +41,7 @@ const ProductPage = () => {
                 <Row>
                   <Col>Price:</Col>
                   <Col>
-                    <strong>{product.price}</strong>
+                    <strong>{numberFormat(product.price)}</strong>
                   </Col>
                 </Row>
               </ListGroup.Item>

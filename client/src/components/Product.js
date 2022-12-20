@@ -1,6 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+// import Rating
+import { numberFormat } from "../helpers";
 
 const Product = ({ product }) => {
   return (
@@ -21,7 +23,7 @@ const Product = ({ product }) => {
             {product.rating} from {product.numReviews}
           </div>
         </Card.Text>
-        <Card.Text as="h3">Rp{product.price}</Card.Text>
+        <Card.Text as="h3">{numberFormat(product.price)}</Card.Text>
       </Card>
     </div>
   );
