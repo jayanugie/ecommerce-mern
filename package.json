@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server mern",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayanugie/ecommerce-mern.git"
+  },
+  "keywords": [
+    "ecommerce",
+    "mern",
+    "express"
+  ],
+  "author": "jayanugie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayanugie/ecommerce-mern/issues"
+  },
+  "homepage": "https://github.com/jayanugie/ecommerce-mern#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
