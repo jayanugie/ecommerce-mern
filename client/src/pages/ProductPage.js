@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
-// import Rating
+import Rating from "../components/Rating";
 // import products from "../products";
 import { numberFormat } from "../helpers";
 import axios from "axios";
@@ -19,8 +19,7 @@ const ProductPage = () => {
     fetchProduct();
     // eslint-disable-next-line
   }, []);
-    // eslint-enable-next-line
-
+  // eslint-enable-next-line
 
   // const product = products.find((p) => p._id === id);
   // if (!product) return null;
@@ -41,10 +40,12 @@ const ProductPage = () => {
             </ListGroup.Item>
             <ListGroup.Item>
               <p>
-                {product.rating} from {product.numReviews}
+                <Rating stars={product.rating} reviews={product.numReviews} />
               </p>
             </ListGroup.Item>
-            <ListGroup.Item>Price: {numberFormat(product.price)}</ListGroup.Item>
+            <ListGroup.Item>
+              Price: {numberFormat(product.price)}
+            </ListGroup.Item>
             <ListGroup.Item>Description: {product.description}</ListGroup.Item>
           </ListGroup>
         </Col>
